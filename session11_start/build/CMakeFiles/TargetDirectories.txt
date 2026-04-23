@@ -1,0 +1,4 @@
+/mnt/c/Users/bbujd/Desktop/session11_start/build/CMakeFiles/dungeon_crawler.dir
+/mnt/c/Users/bbujd/Desktop/session11_start/build/CMakeFiles/test.dir
+/mnt/c/Users/bbujd/Desktop/session11_start/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/bbujd/Desktop/session11_start/build/CMakeFiles/rebuild_cache.dir
