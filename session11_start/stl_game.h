@@ -45,33 +45,49 @@ class QuestManager {
 		  return quests_.end() != quests_.find(quest.id);
 	 }
 
-    void completeQuest(const std::string& /*questId*/) {
+    void completeQuest(const std::string& questId) {
         // TODO: find quest in map, set completed = true, insert id into set
+		  std::map<std::string,Quest>::iterator it = quests_.find(questId);
+		  if(it != quests_.end()){
+				it->second.completed=true;
+				completedQuests_.insert(questId);
+		  } 
+
     }
 
-    bool isCompleted(const std::string& /*questId*/) const {
+    bool isCompleted(const std::string& questId) const {
         // TODO: return completedQuests_.count(questId) > 0;
-        return false;
+		  return completedQuests_.count(questId) > 0;
     }
 
     std::vector<Quest> getActiveQuests() const {
         // TODO: iterate quests_, collect those where completed == false
-        return {};
-    }
+		  std::vector<Quest> activeQuests;
+		  std::for_each(quests_.begin(),quests_.end(),[&activeQuests](const std::pair<std::string,Quest> &pair){
+				if(pair.second.completed == false) activeQuests.push_back(pair.second);
+		  });
+		  return activeQuests;
+	 }
 
     std::vector<Quest> getCompletedQuests() const {
         // TODO: iterate quests_, collect those where completed == true
-        return {};
+		  std::vector<Quest> compQuests;
+		  std::for_each(quests_.begin(),quests_.end(),[&compQuests](std::pair<std::string,Quest> &pair){
+				if(pair.second.completed == true) compQuests.push_back(pair.second);
+		  });
+        return compQuests;
     }
 
     size_t getQuestCount() const {
         // TODO: return quests_.size();
-        return 0;
+        return quests_.size();
+;
     }
 
     size_t getCompletedCount() const {
         // TODO: return completedQuests_.size();
-        return 0;
+        return completedQuests_.size();
+;
     }
 };
 
@@ -104,33 +120,50 @@ struct PlayerRecord {
 };
 
 // TODO: Sort players by health (ascending) using std::sort + lambda
-inline void sortByHealth(std::vector<PlayerRecord>& /*players*/) {
+inline void sortByHealth(std::vector<PlayerRecord>& players) {
+	 std::sort(players.begin(),players.end(),[](const PlayerRecord& rec1, const PlayerRecord& rec2){
+		  return rec1.health > rec2.health;
+	 });
 }
 
 // TODO: Find player by name using std::find_if + lambda
 //   Return pointer to element, or nullptr
-inline PlayerRecord* findByName(std::vector<PlayerRecord>& /*players*/,
-                                const std::string& /*name*/) {
-    return nullptr;
+inline PlayerRecord* findByName(std::vector<PlayerRecord>& players,const std::string& name) {
+	 std::vector<PlayerRecord>::iterator it = std::find_if(players.begin(),players.end(),[&name](const PlayerRecord &pr){
+		  return pr.name == name;
+	 });
+	 if(it == players.end()) {
+		  return nullptr;
+	 }
+	 return &(*it);
 }
 
 // TODO: Remove all players with health <= 0 using erase-remove idiom
-inline void removeDead(std::vector<PlayerRecord>& /*players*/) {
+inline void removeDead(std::vector<PlayerRecord>& players) {
+	 players.erase(std::remove_if(players.begin(),players.end(),[](PlayerRecord &player){
+		  return player.health<=0;
+	 }),players.end()); 
 }
 
 // TODO: Count players that have a specific item using std::count_if + lambda
-inline int countWithItem(const std::vector<PlayerRecord>& /*players*/,
-                         const std::string& /*item*/) {
-    return 0;
+inline int countWithItem(const std::vector<PlayerRecord>& players,
+                         const std::string& item) {
+	 return std::count_if(players.begin(),players.end(),[&item](const PlayerRecord &player){
+		  return std::find(player.inventory.begin(), player.inventory.end(), item) != player.inventory.end();
+	 });
 }
 
 // TODO: Check if ALL players are alive using std::all_of
-inline bool allAlive(const std::vector<PlayerRecord>& /*players*/) {
-    return false;
+inline bool allAlive(const std::vector<PlayerRecord>& players) {
+	 return std::all_of(players.begin(),players.end(),[](const PlayerRecord &p){
+		  return p.health > 0;
+	 });
 }
 
 // TODO: Check if ANY player has a specific item using std::any_of
-inline bool anyHasItem(const std::vector<PlayerRecord>& /*players*/,
-                       const std::string& /*item*/) {
-    return false;
+inline bool anyHasItem(const std::vector<PlayerRecord>& players,
+                       const std::string& item) {
+	 return std::any_of(players.begin(),players.end(),[&item](const PlayerRecord &p){
+		  return std::find(p.inventory.begin(),p.inventory.end(), item) != p.inventory.end();
+	 });
 }
