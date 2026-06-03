@@ -1,0 +1,6 @@
+﻿  selforg.cpp
+C:\Users\KomPhone\Desktop\selforg\selforg\selforg.cpp(73,39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\selforg\selforg\selforg.cpp(85,36): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\selforg\selforg\selforg.cpp(99,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\selforg\selforg\selforg.cpp(111,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  selforg.vcxproj -> C:\Users\KomPhone\Desktop\selforg\x64\Debug\selforg.exe
