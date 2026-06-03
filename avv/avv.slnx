@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="avv/avv.vcxproj" Id="dee0c15b-1d01-4433-9e36-a187a75efee5" />
+</Solution>

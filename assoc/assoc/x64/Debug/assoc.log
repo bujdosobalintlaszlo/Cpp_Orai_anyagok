@@ -1,0 +1,41 @@
+﻿  assoc.cpp
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.cpp(75,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(53,24): error C2440: 'return': cannot convert from 'const int' to 'Value &'
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(53,24): error C2440:         with
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(53,24): error C2440:         [
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(53,24): error C2440:             Value=int
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(53,24): error C2440:         ]
+  (compiling source file 'assoc.cpp')
+      C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(53,24):
+      Conversion loses qualifiers
+      C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(53,24):
+      the template instantiation context (the oldest one first) is
+          C:\Users\KomPhone\Desktop\assoc\assoc\assoc.cpp(110,66):
+          see reference to class template instantiation 'association<std::string,std::set<int,std::greater<int>,std::allocator<int>>,int,std::equal_to<Key>,std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<int>>>>' being compiled
+          with
+          [
+              Key=std::string
+          ]
+          C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(50,12):
+          while compiling class template member function 'Value &association<std::string,std::set<int,std::greater<int>,std::allocator<int>>,Value,std::equal_to<Key>,std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<int>>>>::operator [](const Key &)'
+          with
+          [
+              Value=int,
+              Key=std::string
+          ]
+              C:\Users\KomPhone\Desktop\assoc\assoc\assoc.cpp(114,5):
+              see the first reference to 'association<std::string,std::set<int,std::greater<int>,std::allocator<int>>,int,std::equal_to<Key>,std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<int>>>>::operator []' in 'main'
+          with
+          [
+              Key=std::string
+          ]
+  
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(60,16): error C2440: 'return': cannot convert from 'const int' to 'Value &'
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(60,16): error C2440:         with
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(60,16): error C2440:         [
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(60,16): error C2440:             Value=int
+C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(60,16): error C2440:         ]
+  (compiling source file 'assoc.cpp')
+      C:\Users\KomPhone\Desktop\assoc\assoc\assoc.h(60,16):
+      Conversion loses qualifiers
+  

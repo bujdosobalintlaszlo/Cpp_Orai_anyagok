@@ -1,0 +1,3 @@
+﻿  avv.cpp
+C:\Users\KomPhone\Desktop\avv\avv\avv.cpp(61,29): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  avv.vcxproj -> C:\Users\KomPhone\Desktop\avv\x64\Debug\avv.exe
