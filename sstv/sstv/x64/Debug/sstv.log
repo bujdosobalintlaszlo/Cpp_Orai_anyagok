@@ -1,0 +1,5 @@
+﻿  sstv.cpp
+C:\Users\KomPhone\Desktop\sstv\sstv\sstv.cpp(56,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\sstv\sstv\sstv.cpp(106,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\sstv\sstv\sstv.cpp(128,27): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  sstv.vcxproj -> C:\Users\KomPhone\Desktop\sstv\x64\Debug\sstv.exe
