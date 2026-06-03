@@ -1,0 +1,6 @@
+﻿  cppTest.cpp
+C:\Users\KomPhone\Desktop\cppTest\cppTest\cppTest.cpp(55,29): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\cppTest\cppTest\cppTest.cpp(64,29): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\cppTest\cppTest\cppTest.cpp(71,29): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Users\KomPhone\Desktop\cppTest\cppTest\cppTest.cpp(85,45): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  cppTest.vcxproj -> C:\Users\KomPhone\Desktop\cppTest\x64\Debug\cppTest.exe
